@@ -76,6 +76,16 @@ A real run of [`examples/input.json`](examples/input.json) on 5 November 2026
 | `search` | The keyword search that found the job; null for the whole-board feed. |
 | `scrapedAt` | When the row was collected, ISO 8601 UTC. |
 
+<!-- agent-recipes:start -->
+## Use with AI agents
+
+Load [OnlineJobs.ph jobs](https://apify.com/data_daemon/onlinejobs-ph-scraper) as **cited LangChain documents**, or run a daily only-new feed
+with bounded pagination and a USD charge cap. Both [runnable recipes](examples/agents/README.md) include offline fixtures,
+failure/resume tests and pinned dependencies; no LLM key is needed.
+[India Jobs MCP](https://apify.com/data_daemon/india-jobs-mcp) is the ten-Indian-board alternative for agents
+(WTTJ, Gupy and OnlineJobs.ph use their own filtered Apify MCP endpoints).
+<!-- agent-recipes:end -->
+
 ## Daily feed of only new jobs
 
 ```bash
